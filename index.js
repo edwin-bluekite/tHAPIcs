@@ -27,6 +27,8 @@ internals.main = function () {
 	//Log the route table if there is one
         console.log(server.table());
     });
+
+    var routes = require('./routes')(server);
 }
 
 internals.main();
