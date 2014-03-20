@@ -1,5 +1,5 @@
 // var requireDirectory = require('require-directory');
-validation =  require('schema.js');
+var Joi = require('joi');
 
 module.exports =  function(){
 
@@ -27,8 +27,8 @@ module.exports =  function(){
                     }
                 },
                 validate:{
-                    path: validation.schema.path,
-                    query: validation.schema.query
+                    path: Joi.any(),
+                    query: Joi.any()
                 }
             }
         },
@@ -53,7 +53,7 @@ module.exports =  function(){
                     }
                 },
                 validate:{
-                    path: validation.schema.pathId,
+                    path: Joi.any()
                 }
             }
         },
@@ -78,7 +78,7 @@ module.exports =  function(){
                     }
                 },
                 validate:{
-                    path: validation.schema.path,
+                    path: Joi.any()
                 }
             }
         },
@@ -103,7 +103,7 @@ module.exports =  function(){
                     }
                 },
                 validate:{
-                    path: validation.schema.path,
+                    path: Joi.any()
                 }
             }
         }
