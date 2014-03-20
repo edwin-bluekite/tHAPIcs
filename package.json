@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/edwin-bluekite/thapics/issues"
   },
-  "homepage": "https://github.com/edwin-bluekite/thapics"
+  "homepage": "https://github.com/edwin-bluekite/thapics",
+  "dependencies": {
+    "hapi": "^3.0.1"
+  }
 }
