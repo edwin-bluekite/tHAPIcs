@@ -24,6 +24,7 @@
   "homepage": "https://github.com/edwin-bluekite/thapics",
   "dependencies": {
     "googleapis": "^0.6.1",
-    "hapi": "^3.0.1"
+    "hapi": "^3.0.1",
+    "json-path": "^0.1.3"
   }
 }

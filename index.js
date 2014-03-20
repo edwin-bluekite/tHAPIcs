@@ -1,5 +1,6 @@
 var Hapi = require("hapi");
 var Googleapis = require('googleapis');
+var Jpath = require('json-path')
 
 // Declare internals
 var internals = {};
@@ -18,7 +19,9 @@ internals.main = function () {
 		var params = { part: 'snippet',q:"xoom.com",type:"channel", key:"AIzaSyAY2jNk6xt1xiFhajpRc3hBxFD1MlgvV7Y" };
 		var req1 = client.youtube.search.list(params);
 		req1.execute(function (err, response) {
-		    console.log('Channel results', response);
+		    ids = Jpath.resolve(response,"../snippet");
+		    //console.log(response);
+		    console.log('Channel results', ids);
 		    });
 	});
 	//Log the route table if there is one
