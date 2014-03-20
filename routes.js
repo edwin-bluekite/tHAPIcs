@@ -18,13 +18,8 @@ module.exports =  function(){
                             '502, An internal server error occurred'
                             ],
                 tags: ['api'],
-                handler: {
-                    proxy: {
-                        // mapUri: controller.accounts.mapper,
-                        passThrough: true,
-                        // redirects: 2,
-                        // onResponse: controller.accounts.onResponse
-                    }
+                handler: function (request, reply) {
+                    reply('hello world');
                 },
                 validate:{
                     path: Joi.any(),
@@ -44,13 +39,8 @@ module.exports =  function(){
                             '502, An internal server error occurred'
                             ],
                 tags: ['api'],
-                handler: {
-                    proxy: {
-                        // mapUri: controller.accounts.mapper,
-                        passThrough: true,
-                        // redirects: 2,
-                        // onResponse: controller.accounts.onResponse
-                    }
+                handler: function (request, reply) {
+                    reply('hello world');
                 },
                 validate:{
                     path: Joi.any()
@@ -69,13 +59,8 @@ module.exports =  function(){
                             '502, An internal server error occurred'
                             ],
                 tags: ['api'],
-                handler: {
-                    proxy: {
-                        // mapUri: controller.accounts.mapper,
-                        passThrough: true,
-                        // redirects: 2,
-                        // onResponse: controller.accounts.onResponse
-                    }
+                handler: function (request, reply) {
+                    reply('hello world');
                 },
                 validate:{
                     path: Joi.any()
@@ -94,13 +79,8 @@ module.exports =  function(){
                             '502, An internal server error occurred'
                             ],
                 tags: ['api'],
-                handler: {
-                    proxy: {
-                        // mapUri: controller.accounts.mapper,
-                        passThrough: true,
-                        // redirects: 2,
-                        // onResponse: controller.accounts.onResponse
-                    }
+                handler: function (request, reply) {
+                    reply('hello world');
                 },
                 validate:{
                     path: Joi.any()
