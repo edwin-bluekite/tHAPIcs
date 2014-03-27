@@ -79,6 +79,12 @@ routes =[
             validate:{
                 path: Joi.any()
             }
+        },{
+            method: 'GET',
+            path: '/{path*}',
+            handler: {
+                directory: { path: './public', listing: false, index: true }
+            }
         }
     }
 ];
