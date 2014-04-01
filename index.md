@@ -10,7 +10,7 @@ A project that use Freebase.com to discover topic properties for a youtube.com c
 
 
 ##Description
-tHAPIcs is an Hapi Nodejs application that analyse all the Freebase knowledge graph topics for a youtube channel using the “Youtube Topics API” to get semantic video annotations.
+tHAPIcs is an Hapi Nodejs application that analyse all the Freebase knowledge graph topics for a youtube channel using the “Youtube Topics API” to get semantic video annotations..
 
 ##Usefull links
 * Website http://edwin-bluekite.github.io/tHAPIcs/
