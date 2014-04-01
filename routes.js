@@ -4,7 +4,7 @@ var handlers = require('./handler.js');
 routes =[
     {
         method: 'GET',
-        path: '/v1/channels/search',
+        path: '/v1/channels',
         config:{
             handler: handlers.search,
             description: 'Get a list of channels that match a query string',
@@ -16,11 +16,7 @@ routes =[
                 '200, Ok',
                 '404, Not Found',
                 '502, An internal server error occurred'
-            ],
-            validate:{
-                path: Joi.any(),
-                query: Joi.any()
-            }
+            ]
         }
     },
     {
@@ -62,7 +58,8 @@ routes =[
                 path: Joi.any()
             }
         }
-    },{
+    },
+    {
         method: 'GET',
         path: '/v1/channel/{channelId}/topics',
         config:{
@@ -79,12 +76,13 @@ routes =[
             validate:{
                 path: Joi.any()
             }
-        },{
-            method: 'GET',
-            path: '/{path*}',
-            handler: {
-                directory: { path: './public', listing: false, index: true }
-            }
+        }
+    },
+    {
+        method: 'GET',
+        path: '/{path*}',
+        handler: {
+            directory: { path: './public', listing: false, index: true }
         }
     }
 ];

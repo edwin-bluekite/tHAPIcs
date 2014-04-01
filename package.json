@@ -24,6 +24,8 @@
   "homepage": "https://github.com/edwin-bluekite/thapics",
   "dependencies": {
     "boom": "^2.2.2",
+    "catbox": "^2.2.0",
+    "catbox-memory": "^1.0.1",
     "googleapis": "^0.6.1",
     "hapi": "^3.0.1",
     "joi": "^2.8.0",

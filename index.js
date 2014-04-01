@@ -20,7 +20,14 @@ var serverOptions = {
 
 
 internals.main = function () {
-    var server = new Hapi.Server("0.0.0.0", 3000);
+    
+    var config = {
+        // cache: {
+        //     engine: 'catbox-memory'
+        // }
+    };
+
+    var server = new Hapi.Server("0.0.0.0", 3000,config);
     server.route(routes.routes);
 
     server.start(function () {
