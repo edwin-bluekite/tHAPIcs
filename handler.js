@@ -106,6 +106,7 @@ videoPagination = function(request,reply,token){
 internals.videos = function (request,reply){
     if(request.params.channelId == undefined) return reply(Boom.badRequest('parameter channelId missing'));
     videoPagination(request,reply);
+    //request.query.page
 }
 
 internals.topicsObject = {};
@@ -151,7 +152,9 @@ internals.getVideoTopics = function(videos,reply){
 			for(var m in internals.topicsObject){
 			    
 			}
-			var res = reply(internals.topicsObject);
+			internals.topicsPagination(internals.topicsObject, reply);
+			//console.log(internals.topicsObject.slice(10,20),'10th element');
+			//var res = reply(internals.topicsObject);
 			internals.topicsObject = {};
 			res.statusCode = response.statusCode;
 			//res.headers = response.headers;
@@ -167,6 +170,10 @@ internals.getVideoTopics = function(videos,reply){
     //console.log(internals.topicsObject);
 }
 
+internals.topicsPagination = function (topicObject, reply){
+
+    var array = [];
+}
 internals.storeTopics = function (videos,reply){
     
 }
